@@ -1,0 +1,37 @@
+{
+    "ips": [
+        {
+            "ip": "45.143.203.10",
+            "city": "Kemerovo",
+            "region": "Kuzbass",
+            "country": "RU",
+            "org": "AS207713 GLOBAL INTERNET SOLUTIONS LLC"
+        },
+        {
+            "ip": "103.75.201.2",
+            "city": "Sydney",
+            "region": "New South Wales",
+            "country": "AU",
+            "org": null
+        },
+        {
+            "ip": "185.220.101.4",
+            "city": "Berlin",
+            "region": "State of Berlin",
+            "country": "DE",
+            "org": "AS60729 Stiftung Erneuerbare Freiheit"
+        },
+        {
+            "ip": "209.141.38.71",
+            "city": "Las Vegas",
+            "region": "Nevada",
+            "country": "US",
+            "org": "AS53667 FranTech Solutions"
+        }
+    ],
+    "domains": [
+        "malicious-example.com",
+        "badsite.biz",
+        "phishy.click"
+    ]
+}
