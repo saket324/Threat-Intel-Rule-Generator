@@ -1,5 +1,6 @@
 import requests
 import json
+from utils import build_ioc_entry
 
 # Feodo Tracker JSON Feed (botnet IPs)
 FEED_URL = "https://feodotracker.abuse.ch/downloads/ipblocklist.json"
