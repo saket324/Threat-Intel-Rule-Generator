@@ -1,0 +1,13 @@
+{
+    "ips": [
+        "45.143.203.10",
+        "103.75.201.2",
+        "185.220.101.4",
+        "209.141.38.71"
+    ],
+    "domains": [
+        "malicious-example.com",
+        "badsite.biz",
+        "phishy.click"
+    ]
+}
