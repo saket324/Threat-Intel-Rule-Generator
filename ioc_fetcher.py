@@ -1,23 +1,28 @@
 import requests
 import json
 
-# Simulate threat IOC feed (AbuseIPDB, OTX etc.) 
-simulated_iocs = {
-    "ips": [
-        "45.143.203.10",
-        "103.75.201.2",
-        "185.220.101.4",
-        "209.141.38.71"
-    ],
-    "domains": [
-        "malicious-example.com",
-        "badsite.biz",
-        "phishy.click"
-    ]
-}
+# Feodo Tracker JSON Feed (botnet IPs)
+FEED_URL = "https://feodotracker.abuse.ch/downloads/ipblocklist.json"
 
-# Save raw IOCs
-with open("outputs/raw_iocs.json", "w") as f:
-    json.dump(simulated_iocs, f, indent=4)
+def fetch_iocs():
+    response = requests.get(FEED_URL)
+    lines = response.text.splitlines()
 
-print("[+] Raw IOCs saved to outputs/raw_iocs.json")
+    ips = []
+    for line in lines:
+        if line.startswith("#") or not line.strip():
+            continue
+        ips.append(line.strip())
+
+    data = {
+        "ips": ips[:20],  # limit for testing
+        "domains": []     # could add real domain feed later
+    }
+
+    with open("outputs/raw_iocs.json", "w") as f:
+        json.dump(data, f, indent=4)
+
+    print(f"[+] Fetched {len(data['ips'])} IPs from live feed.")
+
+if __name__ == "__main__":
+    fetch_iocs()
