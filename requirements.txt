@@ -1,1 +1,3 @@
 requests
+OTXv2==1.5.12
+ipinfo
